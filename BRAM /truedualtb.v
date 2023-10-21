@@ -19,7 +19,7 @@ wire [15:0] douta;
 wire [15:0] doutb;
 
 
-truedual uut(
+dualport uut(
 
 .clk(clk),
 .wrena(wrena),
