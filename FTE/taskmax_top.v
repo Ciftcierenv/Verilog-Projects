@@ -3,7 +3,7 @@
 module taskmaxtop (
 );
 reg[7:0] a,b;
-wire [7:0]out;
+reg [7:0]out;
 
 taskmax comp(
 .a(a),
