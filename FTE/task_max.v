@@ -2,20 +2,20 @@
 module taskmax(
 input[7:0]a,
 input[7:0]b,
-output [7:0]out
+output reg [7:0]out
 );
-reg [7:0] outreg;
-task compare(input[7:0]a,input[7:0]b,output reg[7:0]outreg);
+
+task compare(input[7:0]a,input[7:0]b,output reg[7:0]out);
 if (a>b) begin
-    outreg <= a;
+    out <= a;
 end
-else begin outreg <= b; end
+else begin out <= b; end
 
 endtask
 
 always@* begin
 
-compare(a,b,outreg);
+compare(a,b,out);
 end
-assign out=outreg;
+
 endmodule
